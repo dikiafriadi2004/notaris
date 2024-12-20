@@ -1,0 +1,116 @@
+/****************
+ 05  FORM START
+*****************/
+
+.form-control-color{
+  display: block;
+  background-color: transparent;
+  border-color: var(--#{$prefix}border-color);
+  border-radius: 5px;
+}
+.form-select{   
+    background-color: var(--#{$prefix}bodybg-color);
+    border: none;
+}
+.form-control {
+  background-color: var(--#{$prefix}bodybg-color);
+  border: none; 
+  font-size: 14px;
+  padding: 10px 15px;
+  color: $font-light;
+  border-radius: 5px;
+  &:focus {
+    box-shadow: none;   
+    background-color: var(--#{$prefix}bodybg-color);
+  }
+  &::placeholder {
+    color: $font-light;
+  }
+}
+.form-group { 
+  margin-bottom: 20px;
+}
+.form-label {
+  text-transform: capitalize;
+  font-weight: 500;
+
+}
+.small-group {
+  display: flex;
+  align-items: center;
+
+  >div {
+    width: 100%;
+
+    &:nth-child(n+2) {
+      margin-left: 15px;
+    }
+  }
+}
+
+select.form-control {
+  position: relative;
+  appearance: auto;
+}
+
+.input-group-text {
+  border: none;
+  color: $font-light;
+  background-color: var(--#{$prefix}bodybg-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* custom chekbox  start*/
+.custom-chek {
+  margin-bottom: 0;
+  .form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    border-color: var(--#{$prefix}border-color);
+    box-shadow: none;
+    margin-top: 1px;
+    &:checked {
+      background-color: $theme-primary;
+      border-color: $theme-primary;
+      box-shadow: none;
+    }
+  }
+  label {
+    margin-left: 5px;
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/* check color */
+$check-colors:(
+    "primary":    $theme-primary ,
+    "secondary":  $theme-secondary ,
+    "success":    $theme-success ,
+    "info":       $theme-info ,
+    "warning":    $theme-warning ,
+    "danger":     $theme-danger ,   
+);
+@each  $checkbox-colorname , $check-color  in $check-colors {   
+    .check-#{$checkbox-colorname} {
+      .form-check-input {       
+        border-color: var(--#{$prefix}border-color);
+        &:checked {
+          background-color: $check-color;
+          border-color: $check-color;         
+        }
+      }     
+    }
+}

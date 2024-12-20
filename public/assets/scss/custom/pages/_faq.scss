@@ -1,0 +1,35 @@
+/*********************
+31  FAQ START
+**********************/
+.codex-accordion{   
+    overflow: hidden;
+    .cdx-collapse{
+        padding:15px;
+        padding-right: 30px;
+        display: block;       
+        border-bottom: 1px solid var(--#{$prefix}border-color) ;      
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; 
+        position: relative;              
+        &:before{
+            content:"\f106";
+            font-family: $font-awesome;
+            position: absolute;            
+            inset-block-start:10px;            
+            inset-inline-end:15px;
+            font-size: 24px;           
+        }
+        &.collapsed{
+            &:before{
+                content:"\f107";
+            }
+        }  
+    }    
+    .accordion-item{
+        border: 1px solid var(--#{$prefix}border-color) !important;
+        border-radius: 5px;       
+        &:nth-child(n+2){
+            margin-top: 20px;
+        }         
+    }
+}

@@ -1,0 +1,248 @@
+/***********************
+  36 DASHBOARD START
+*************************/
+.common-dash{   
+    tr{              
+        th,td{
+            white-space: nowrap;           
+        }
+        td{                    
+            vertical-align: middle;
+            .badge{
+                transition: all 0.4s ease;
+               
+            }
+            .media{
+                align-items:center;
+                >img{
+                    margin-right: 15px;
+                }
+            }
+            span{
+                display: block;
+                color: $font-light;
+                text-transform: capitalize;
+            }
+            i{          
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }    
+        .media{
+            .img-wrap{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: all 0.4s ease;
+                background-color: rgba($theme-primary,0.1);
+            }
+        }
+        &:hover{
+            .media{
+                .img-wrap{
+                    box-shadow: inset 0 0 0 1.2em rgba($theme-primary,0.2);
+                }
+            }
+            td{ 
+                .badge{
+                    transition: all 0.4s ease;
+                }
+                .badge_primary{
+                    background-color: $theme-primary !important;                                      
+                    color: $white !important;
+                }
+                .badge_secondary{                   
+                    background-color: $theme-secondary !important;
+                    color: $white !important;
+                }
+                .badge_danger{                   
+                    background-color: $theme-danger !important;
+                    color: $white !important;
+                }
+            }
+        }
+    }  
+     .badge{
+        i{
+            font-size: 16px;
+            margin-left:5px;
+        }
+     }
+    .copycode-grid{
+        padding:0px;
+        max-height: 0;        
+        pre{
+            margin: 0;
+        }  
+        &.active{
+            max-height: 100%;            
+            transition: all 0.5s ease-in;
+        }
+    }   
+}
+
+/* earning-chart */
+.earning-chart{
+    position:relative;
+    .card-body{        
+        padding: 0 !important;    
+        overflow: hidden ;   
+        border-bottom-left-radius:17px;
+        border-bottom-right-radius:17px; 
+        .site-impres{           
+            padding-left: 25px;           
+        }      
+        #earning-chart{
+            margin-bottom: -20px;
+            margin-left: -20px;
+            margin-right: 0;
+        }        
+    }       
+}
+/* product chart */
+.product-chart{         
+    .card-body{
+        padding:0 !important;
+        overflow:hidden;
+        z-index:1;
+        #product-chart{
+            margin-left: -15px;            
+            margin-bottom: -30px;
+        }
+    }   
+
+    .vactor-animated{
+        li{
+            svg{
+                path{
+                    stroke: rgba($theme-secondary,0.2);                    
+                }
+            }
+        }
+    }
+}
+
+/* visitor ratetbl*/
+.visitor-ratetbl{
+    .card-body{
+        padding-top:0;       
+    }
+}
+
+/* project-status */
+.project-status{   
+    .card-header{
+        .setting-card{
+            margin-left: auto;
+        }
+    }
+    .media{
+        align-items: center;
+        justify-content: space-between;              
+        margin-top: 23px;
+        margin-bottom: 23px;          
+        .media-body{           
+            text-align: end;  
+        }
+    }
+}
+
+/*dash live chat*/
+.dash-chat{
+    .dash-chatbox{
+        ul.chating-list{           
+            background-color: var(--#{$prefix}bodybg-color);
+            padding: 15px;
+            border-radius: 5px;
+            height: 340px;
+            overflow: auto;
+            li{
+                .user-msgbox,.admin-msgbox{
+                    max-width: 70%;
+                    width:fit-content;        
+                    .media{
+                        img{
+                            width: 28px;
+                            height: 28px;
+                        }
+                        p{                           
+                            background-color: var(--#{$prefix}body-bg);                     
+                            padding: 5px 10px;                           
+                        }
+                    }
+                }
+                .user-msgbox{
+                    .media{
+                        img{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .admin-msgbox{
+                    margin-left: auto;
+                    .media{
+                        img{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                +li{
+                    margin-top: 10px;
+                }
+            }
+        }
+        .userchat-typebox{
+            padding-top:25px;
+            align-items: center;
+            .btn{
+                padding: 10px 12px;
+                svg{
+                    width:20px;
+                    height:auto;
+                }
+            }
+        }
+    }
+}
+
+
+/* visitor-performance */
+.visitor-performance{
+    .apexcharts-legend{        
+        top: 0 !important;
+        left: unset !important;
+        right: 20px !important;
+        width: fit-content;
+        padding: 0 ;       
+        span{           
+            font-weight: 600 !important;
+            color: $font-light !important;
+        }
+    }
+    .card-body{
+        padding:38px 10px 0 10px !important;
+        overflow: hidden;
+        #visitor-chart{
+            margin-top: -15px;
+        }
+        h4{
+            padding-left: 25px;
+            color: $theme-primary;
+        }
+    }
+}
+
+/* support-inboxtbl */
+.support-inboxtbl{
+    tr{     
+      td{
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+    }
+}

@@ -1,0 +1,283 @@
+/*************************
+  24 USER START
+************************/
+/* user list*/
+.user-card{
+    .user-setting{       
+        .action-dropdown{            
+            min-width: 160px;
+        } 
+    }
+    .card-body{
+        text-align: center ;
+        padding-top: unset !important;
+        .user-imgwrap{
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .user-detailwrap{
+            h3{
+                font-size: 20px;
+                margin-bottom: 5px;
+                text-transform: capitalize;
+            }
+            h6{               
+                color: $font-light;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }           
+            .group-btn{
+                margin-top: 20px;               
+            }
+        }       
+    }
+}
+
+
+/* user profile*/
+.cdxuser-profile{
+    margin-bottom: 20px;
+    .card-header{
+        display: flex;
+        align-items: center;
+        h4 {
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+    .contact-list{
+        li{
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            .iocn-item{
+                margin-right:15px;
+                svg{
+                    width:auto;
+                    height: 20px;
+                }
+            }           
+            &:nth-child(n+2){
+                margin-top:15px;
+            }           
+        }
+    }
+    .follower-list{
+        li{             
+            .media{
+                img{
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 15px;
+                    border-radius: 5px;
+                }
+            }           
+            .badge{
+                text-transform:capitalize;
+                svg{
+                    width:auto;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+            }
+            &:nth-child(n+2){
+                margin-top: 15px;
+            }
+        }
+    }
+    .gallerypost-list{
+        margin-left: -10px;
+        margin-top: -10px;
+        li{
+            display: inline-block;
+            img{
+                width: 92px;
+                height: auto;
+                border-radius: 5px;
+            }
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    }
+    .post-list{
+        >li{
+            &:nth-child(n+2){
+                margin-top:30px;
+            }
+        }
+        .post-header{                       
+            span{
+                font-size: 14px;
+                color: $font-light;               
+            }
+            .media{
+                align-items: center;
+                 img{
+                     width: 45px;
+                     height: 45px;
+                     margin-right: 15px;
+                     border-radius: 5px;
+                 }
+            }
+            .post-setting{
+                position: relative;
+                .action-toggle{                   
+                    i{
+                        font-size: 26px;
+                    }
+                }
+                .theme-dropdown{
+                    right:0;
+                    min-width: 200px;                   
+                    li{                       
+                        svg{
+                            margin-right:10px;
+                        }
+                        a{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }                   
+                }
+            }
+            
+        }
+        .added-postdetail{           
+            margin-top: 20px;
+            padding-bottom: 20px;           
+        }
+        
+        .post-contain{
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: var(--#{$prefix}body-bg);
+            padding: 25px;
+            box-shadow: 0 0 20px 5px rgba($black,0.05);
+            .post-imgwrap{
+                img{
+                    border-radius: 5px;
+                }
+                
+                overflow: hidden;
+            }
+            .post-detail{     
+                padding-top:20px;          
+                >ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    li{
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;                           
+                            text-transform: capitalize;
+                            svg{
+                                margin-right:10px;
+                                height: 20px;
+                                width: auto;
+                            }
+                            &:focus{
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+                .postreact-status{
+                    li{
+                        a{
+                            padding: 0;
+                            letter-spacing: 0.05em;                           
+                            .like-status{                           
+                                border-radius: 5px;
+                                width: 25px;
+                                height: 25px;           
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 10px;
+                                i{
+                                    color:$white;
+                                    font-size: 14px;
+                                }
+                                svg{
+                                    width: auto;
+                                    height: 12px;
+                                    margin-right: unset;
+                                    color: $white;
+                                }                
+                            }
+                        }
+                    }
+                }
+                .post-react{
+                    border-top: 1px solid var(--#{$prefix}border-color);
+                    padding-top: 20px;
+                    margin-top: 20px;
+                    li{
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        a{
+                            background-color: var(--#{$prefix}bodybg-color);
+                            padding: 10px;
+                        }
+                        &:nth-child(n+2){
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .addpost-comment{
+                    border-top: 1px solid var(--#{$prefix}border-color);
+                    padding-top: 20px;
+                    margin-top: 20px;                                  
+                    .input-group{                                              
+                        border-radius: 5px;
+                        overflow: hidden;                                          
+                        .add-comment{
+                            display: flex;
+                            align-items: center;
+                            a{
+                                color: $font-light;
+                            }
+                            li{
+                                &:nth-child(n+2){
+                                    margin-left:15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+            
+    }
+    .action-menu {
+        .action-dropdown{
+            min-width: 215px;
+        }
+    }
+}
+
+
+
+/* usder edit */
+.codexedit-profile{   
+    .group-btn{
+        margin-left: auto;
+        width: fit-content;       
+    }
+    textarea{
+        height:196px;
+    }
+}

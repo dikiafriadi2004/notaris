@@ -1,0 +1,160 @@
+/****************
+  16 SIDEBAR START
+*****************/
+.codex-brand{
+    img{
+        width: 40px;
+        min-width: 40px;
+    }
+}
+.body-layear{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba($black,0.2);
+}
+.codex-sidebar{
+  position: fixed;
+  top:0;
+  inset-inline-start: 0;
+  width: 270px;
+  height: 100%; 
+  transition:all 0.5s ease;
+  z-index:6;
+  background-color: $sidebar-bg;
+  box-shadow: 0 0 20px 5px rgba($black,0.05); 
+  .logo-gridwrap,.icon-logo{
+      padding:18px 20px;     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;     
+      inset-block-start: 0;
+      inset-inline-start: 0;          
+      transition: all 0.5s ease;
+      border-bottom: 1px solid rgba($white,0.1);     
+      .sidebar-action{              
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgba($white,0.05);       
+        color: $theme-primary;
+        position: relative;       
+        svg{
+          color: $white;
+          width: 16px;
+        }
+    }
+    .codex-darklogo{
+      display: none;
+    } 
+  } 
+  .icon-logo{
+    display:none;
+  }
+  
+  .codex-menu{
+    margin-top:20px;
+    padding-bottom: 38px;   
+    height: calc(100vh - 85px);
+  }  
+}
+.codex-menu {   
+  padding-top: 0;
+  .cdxmenu-title {     
+        font-weight: 600;
+        border-bottom: 1px solid rgba($white,0.05);       
+        padding: 0 20px 10px 20px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        h5 {           
+            font-size: 14px;
+            text-transform: capitalize;           
+            font-weight: 600;
+            color: $white;
+        }
+  }
+  li {
+      display: block;
+      position: relative;
+      &.menu-item{
+          &.active{
+              >a{
+                  color:$white;
+                  background-color: rgba($white,0.1);
+              }
+          }
+      }
+      >a {
+          padding: 10px 20px;
+          .icon-item {
+              margin-right: 10px;
+              line-height: 1;
+              i {
+                  font-size: 18px;
+              }
+              svg {
+                  width: 18px;
+                  height: auto;
+              }
+          }
+          >svg {
+              margin-right: 10px;
+          }
+          >i {
+              font-size: 18px;
+              &.fa {
+                  margin-left: auto;
+              }
+          }
+
+          span {
+              transition: all 0.5s ease;
+              line-height: 1;
+          }
+      }
+      a {
+          font-style: normal;                    
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          position: relative;
+          color: rgb($white,.7);
+          font-size: 16px;
+      }
+      .submenu-list,
+      .secondsubmenu-list {
+          display: none;
+      }
+      &.active {
+          .submenu-list,
+          .secondsubmenu-list {
+              display: block;
+          }
+      }
+  }
+  .submenu-list {
+      padding-left: 10px;
+      a {
+          padding-left: 35px;                      
+          color: $font-light;
+          padding:5px 25px;
+      }
+      >li{
+          &.active{
+              >a{
+                  color: $white;
+              }
+          }
+      }
+  }
+}
+
+/****************
+SIDEBAR END
+*****************/

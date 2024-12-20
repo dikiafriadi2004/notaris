@@ -1,0 +1,58 @@
+// theme fonts
+$font-outfit: "Outfit", sans-serif;
+$font-awesome: 'FontAwesome';
+$font-themify: 'themify';
+
+// theme colors
+$theme-primary:#6d64ac;
+$theme-secondary: #439acb;
+$theme-success:#13a55b;
+$theme-info:#1fbfec;
+$theme-warning:#db7441;
+$theme-danger:#e54a4a;
+$theme-light:#f4f4f4;
+$theme-dark:#333333;
+$sidebar-bg:#2A3650;
+
+$theme-colors: (
+  "primary":    $theme-primary,
+  "secondary":  $theme-secondary,
+  "success":    $theme-success,
+  "info":       $theme-info,
+  "warning":    $theme-warning,
+  "danger":     $theme-danger,
+  "light":      $theme-light,
+  "dark":       $theme-dark
+);
+
+
+
+// theme fonts colors
+$black:#051722;
+$white:#ffffff;
+$font-light:#8392a5;
+$bg-light:#F4F7F9;
+$codex-font-color:#262626;
+
+// social icon color
+$fb-color:#385196;
+$twt-color:#00a8ff;
+$insta-color: #e2215d;
+$whp-color:#4aec61;
+
+// dark layout
+$dark-body:#0c162e;
+$dark-card:#2a3650;
+$extradark-card:#223050;
+$dark-font:#cdc9c9;
+$dark-small-font:#cdc9c9;
+$dark-border:#0d3e5e;
+
+:root{   
+    --#{$prefix}bodybg-color: #{$bg-light};
+    // --#{$prefix}border-color:#e5e5e5;
+}
+[data-bs-theme="dark"]{
+    --#{$prefix}body-bg: #{$dark-card};   
+    --#{$prefix}bodybg-color: #{$dark-body};
+}
